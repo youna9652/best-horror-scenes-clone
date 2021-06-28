@@ -68,25 +68,41 @@ header {
 }
 
 main {
-  background-color: $red;
   margin-left: $fixedWidth;
   .movie {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 2%,
+        rgba(0, 0, 0, 0)
+      )
+      $red;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     .wrapper {
+      width: 80%;
       display: flex;
       flex-direction: column;
       .movie__header {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         margin-bottom: 25px;
+        h4 {
+          font-size: 32px;
+          text-transform: uppercase;
+        }
+        h5 {
+          letter-spacing: 2px;
+        }
       }
     }
     img {
       width: 100%;
+      box-shadow: 0 80px 80px -80px #000, 0 0 12px rgb(0 0 0 / 6%),
+        inset 0 0 0 1px rgb(0 0 0 / 20%);
     }
   }
 }
